@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "github_action": {
+      "main": "src/github_action/main.mo",
+      "type": "motoko"
+    },
+    "github_action_assets": {
+      "dependencies": [
+        "github_action"
+      ],
+      "frontend": {
+        "entrypoint": "src/github_action_assets/public/index.js"
+      },
+      "source": [
+        "src/github_action_assets/assets",
+        "dist/github_action_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.6.26",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
