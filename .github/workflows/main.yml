@@ -14,6 +14,6 @@ jobs:
         with:
           identity: ${{ secrets.DFX_IDENTITY }}
           wallets: ${{ secrets.DFX_WALLETS }}
-          network: alpha
+          dfx_params: --no-wallet
       - name: Show success message
         run: echo success!
